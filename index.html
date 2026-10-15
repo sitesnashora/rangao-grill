@@ -84,7 +84,7 @@ header.solid{background:rgba(21,16,12,.88);backdrop-filter:blur(12px);-webkit-ba
 .hero-bg img{width:100%;height:100%;object-fit:cover}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(21,16,12,.95) 0%,rgba(21,16,12,.7) 45%,rgba(21,16,12,.25) 100%),linear-gradient(0deg,var(--coal) 0%,rgba(21,16,12,0) 35%)}
 #sparks{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
-.hero h1{font-size:clamp(3rem,7.6vw,6.6rem);line-height:.95;max-width:11ch;margin:18px 0 22px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.6rem);line-height:.95;max-width:12ch;margin:18px 0 22px;text-shadow:0 6px 40px rgba(0,0,0,.6)}
 .hero h1 span{color:var(--ember);display:block}
 .hero .lead{font-size:1.18rem;color:#e3d6c4;max-width:30em;margin:0 0 34px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
@@ -409,7 +409,7 @@ const CUTS=[
  ['Fraldinha','Macia e saborosa, fatiada na hora.','1628497622880-896ed64d6034']
 ];
 const track=document.getElementById('track'),dots=document.getElementById('dots');
-track.innerHTML=CUTS.map((c,i)=>`<div class="cut${i?'':' on'}"><img loading="lazy" src="${U(c[2],600,600,76)}" alt="${c[0]}"></div>`).join('');
+track.innerHTML=CUTS.map((c,i)=>`<div class="cut${i?'':' on'}"><img src="${U(c[2],600,600,76)}" alt="${c[0]}"></div>`).join('');
 dots.innerHTML=CUTS.map((c,i)=>`<i class="${i?'':'on'}"></i>`).join('');
 const cutEls=[...track.children],dotEls=[...dots.children],info=document.getElementById('cutInfo'),cn=document.getElementById('cutN'),cname=document.getElementById('cutName'),cdesc=document.getElementById('cutDesc');
 let curCut=0;
